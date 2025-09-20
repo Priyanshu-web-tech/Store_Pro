@@ -1,0 +1,88 @@
+{
+  "icecreams": [
+    {
+      "id": 1,
+      "flavor": "Vanilla Delight",
+      "category": "Classic",
+      "isFeatured": true,
+      "description": "A creamy classic vanilla ice cream made from rich milk and real vanilla beans.",
+      "toppings": ["chocolate syrup", "rainbow sprinkles", "cherries"],
+      "ingredients": [
+        { "name": "Milk", "quantity": "2 cups" },
+        { "name": "Sugar", "quantity": "1/2 cup" },
+        { "name": "Vanilla Bean", "quantity": "1 pod" },
+        { "name": "Egg Yolks", "quantity": "3" }
+      ],
+      "price": 3.5,
+      "image": "https://images.unsplash.com/photo-1560008581-09826d1de69e?q=80&w=744&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 2,
+      "flavor": "Chocolate Fudge",
+      "category": "Chocolate",
+      "isFeatured": true,
+      "description": "Rich and decadent chocolate ice cream swirled with gooey fudge ribbons.",
+      "toppings": ["whipped cream", "chocolate chips", "walnuts"],
+      "ingredients": [
+        { "name": "Milk", "quantity": "2 cups" },
+        { "name": "Cocoa Powder", "quantity": "1/2 cup" },
+        { "name": "Sugar", "quantity": "3/4 cup" },
+        { "name": "Dark Chocolate", "quantity": "100g" }
+      ],
+      "price": 4.0,
+      "image": "https://images.unsplash.com/photo-1590080962330-747c6aba8028?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 3,
+      "flavor": "Strawberry Swirl",
+      "category": "Fruity",
+      "isFeatured": false,
+      "description": "Refreshing strawberry ice cream with real fruit chunks and a sweet swirl.",
+      "toppings": [
+        "strawberry syrup",
+        "fresh strawberries",
+        "white chocolate flakes"
+      ],
+      "ingredients": [
+        { "name": "Milk", "quantity": "2 cups" },
+        { "name": "Strawberries", "quantity": "1 cup" },
+        { "name": "Sugar", "quantity": "1/2 cup" },
+        { "name": "Cream", "quantity": "1 cup" }
+      ],
+      "price": 3.8,
+      "image": "https://images.unsplash.com/photo-1562790879-dfde82829db0?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aWNlJTIwY3JlYW18ZW58MHx8MHx8fDA%3D"
+    },
+    {
+      "id": 4,
+      "flavor": "Mint Choco Chip",
+      "category": "Mint",
+      "isFeatured": false,
+      "description": "Cool mint ice cream loaded with crunchy chocolate chips.",
+      "toppings": ["chocolate drizzle", "mint leaves", "mini marshmallows"],
+      "ingredients": [
+        { "name": "Milk", "quantity": "2 cups" },
+        { "name": "Mint Extract", "quantity": "1 tsp" },
+        { "name": "Sugar", "quantity": "1/2 cup" },
+        { "name": "Chocolate Chips", "quantity": "1/2 cup" }
+      ],
+      "price": 4.2,
+      "image": "https://images.unsplash.com/photo-1570197788417-0e82375c9371?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aWNlJTIwY3JlYW18ZW58MHx8MHx8fDA%3D"
+    },
+    {
+      "id": 5,
+      "flavor": "Caramel Crunch",
+      "category": "Caramel",
+      "isFeatured": true,
+      "description": "Smooth caramel ice cream with crunchy toffee bits throughout.",
+      "toppings": ["caramel sauce", "toffee bits", "sea salt flakes"],
+      "ingredients": [
+        { "name": "Milk", "quantity": "2 cups" },
+        { "name": "Caramel Sauce", "quantity": "1/2 cup" },
+        { "name": "Sugar", "quantity": "1/3 cup" },
+        { "name": "Toffee Bits", "quantity": "1/2 cup" }
+      ],
+      "price": 4.5,
+      "image": "https://plus.unsplash.com/premium_photo-1661288452010-951ca57991fc?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8aWNlJTIwY3JlYW18ZW58MHx8MHx8fDA%3D"
+    }
+  ]
+}
