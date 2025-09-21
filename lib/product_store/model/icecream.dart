@@ -1,3 +1,5 @@
+import 'package:store_pro/product_store/model/product.dart';
+
 class IceCreamData {
   IceCreamData({this.icecreams});
 
@@ -29,7 +31,7 @@ class Icecreams {
   String? description;
   List<String>? toppings;
   List<Ingredients>? ingredients;
-  double? price;
+  num? price;
   String? image;
 
   Icecreams(
@@ -56,7 +58,7 @@ class Icecreams {
         ingredients!.add(new Ingredients.fromJson(v as Map<String, dynamic>));
       });
     }
-    price = json['price'] as double;
+    price = json['price'] as num?;
     image = json['image'] as String?;
   }
 
@@ -82,7 +84,7 @@ class Icecreams {
   }
 }
 
-class Ingredients {
+class Ingredients extends Product {
   String? name;
   String? quantity;
 
@@ -100,4 +102,3 @@ class Ingredients {
     return data;
   }
 }
-
