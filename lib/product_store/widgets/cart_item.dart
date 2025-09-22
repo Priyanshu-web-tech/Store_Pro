@@ -20,7 +20,8 @@ class CartItem extends StatelessWidget {
           subtitle: Text(
               '${quantity > 1 ? '$quantity * ' : ''}\$${product.price}',
               style: Styles.productRowItemPrice),
-          trailing: Text("\$ ${product.price! * quantity} ",
+          trailing: Text(
+              '\$ ${(product.price! * quantity).toStringAsFixed(2)} ',
               style: Styles.productRowItemName)),
     );
   }

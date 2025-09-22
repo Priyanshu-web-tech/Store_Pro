@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:ionicons/ionicons.dart';
@@ -191,7 +190,7 @@ class _CartViewState extends State<CartView> {
                 ],
               ),
               const Divider(),
-              if (value.productsInCart.isNotEmpty)
+              if (value.productsInCart.isNotEmpty) ...[
                 ListView.builder(
                     itemBuilder: (context, index) {
                       return CartItem(
@@ -203,31 +202,48 @@ class _CartViewState extends State<CartView> {
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
                     itemCount: value.productsInCart.length),
-              const Divider(),
-              Padding(
-                padding: const EdgeInsets.all(16),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const Text('Total', style: Styles.productRowItemName),
-                    Text('\$${value.totalCost}',
-                        style: Styles.productRowItemName)
-                  ],
+                const Divider(),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Text('Shipping + Tax',
+                          style: Styles.productRowItemPrice),
+                      Text(
+                          '\$${value.shippingCost} + ${value.tax.toStringAsFixed(2)}',
+                          style: Styles.productRowItemPrice)
+                    ],
+                  ),
                 ),
-              ),
-              const Divider(),
-              // Place Order Button
-              ElevatedButton(
-                  onPressed: () {
-                    if (formKey.currentState!.validate()) {
-                      formKey.currentState!.save();
-                      value.clearCart();
-                      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                          content: Text('Order Placed Successfully')));
-                      ;
-                    }
-                  },
-                  child: const Text('Place Order'))
+                Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Text('Total', style: Styles.productRowItemName),
+                      Text('\$${value.totalCost.toStringAsFixed(2)}',
+                          style: Styles.productRowItemName)
+                    ],
+                  ),
+                ),
+                const Divider(),
+                Padding(
+                  padding: const EdgeInsets.all(8),
+                  child: ElevatedButton(
+                      onPressed: () {
+                        if (formKey.currentState!.validate()) {
+                          formKey.currentState!.save();
+                          value.clearCart();
+                          ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(
+                                  content: Text('Order Placed Successfully')));
+                          ;
+                        }
+                      },
+                      child: const Text('Place Order')),
+                )
+              ],
             ],
           );
         }));

@@ -5,6 +5,7 @@ import 'package:store_pro/product_store/model/app_state_model.dart';
 import 'package:store_pro/product_store/model/icecream.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:store_pro/themes/styles.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class ProductItem extends StatelessWidget {
   const ProductItem({required this.icecream, super.key});
@@ -25,6 +26,8 @@ class ProductItem extends StatelessWidget {
           onPressed: () {
             Provider.of<AppStateModel>(context, listen: false)
                 .addProductToCart(icecream.id!);
+            VxToast.show(context,
+                msg: 'Added to cart', position: VxToastPosition.center);
           },
         ));
   }
